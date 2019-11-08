@@ -26,6 +26,30 @@ const SmurfsForm = () => {
         <div className="smurfForm">
             <form onSubmit={handleSubmit}>
                 <div>
+                    <input type="text"
+                           value={smurf.name}
+                           name="name"
+                           placeholder="Smurf Name"
+                           onChange={handleChanges}
+                    />
+                </div>
+                <div>
+                    <input type="text"
+                           value={smurf.age}
+                           name="age"
+                           placeholder="Smurf Age"
+                           onChange={handleChanges}
+                    />
+                </div>
+                <div>
+                    <input type="text"
+                           value={smurf.height}
+                           name="height"
+                           placeholder="Smurf Height"
+                           onChange={handleChanges}
+                    />
+                </div>
+                <div>
                     <button>Add</button>
                 </div>
             </form>
