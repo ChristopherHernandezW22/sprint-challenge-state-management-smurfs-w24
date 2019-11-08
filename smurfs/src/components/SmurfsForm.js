@@ -21,7 +21,7 @@ const SmurfsForm = () => {
             height: ""
         });
     };
-    
+
     return (
         <div className="smurfForm">
             <form onSubmit={handleSubmit}>
