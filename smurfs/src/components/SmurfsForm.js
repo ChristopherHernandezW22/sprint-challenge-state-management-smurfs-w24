@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./App.css"
+import { connect } from 'react-redux';
+import { addSmurf } from '../actions/index';
 
-const SmurfsForm = () => {
+const SmurfsForm = (props) => {
     const [smurf, setSmurf] = useState({
         name: "",
         age: "",
@@ -15,6 +17,7 @@ const SmurfsForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         console.log(smurf);
+        props.addSmurf(smurf);
         setSmurf({
             name: "",
             age: "",
@@ -57,5 +60,5 @@ const SmurfsForm = () => {
     );
 };
 
-export default SmurfsForm;
+export default connect(null, {addSmurf})(SmurfsForm);
 
